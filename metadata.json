@@ -1,0 +1,7 @@
+{
+  "name": "ClinicFlow Token Analytics",
+  "description": "A sophisticated clinic management and token analysis dashboard featuring real-time patient flow visualization, department performance metrics, and AI-driven insights.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
