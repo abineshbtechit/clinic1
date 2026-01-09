@@ -1,7 +1,8 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+// Always use the API key directly from process.env.API_KEY as per guidelines
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getClinicInsights = async (data: any) => {
   try {
@@ -28,6 +29,7 @@ export const getClinicInsights = async (data: any) => {
       }
     });
 
+    // Access the .text property directly as it is a getter, not a method
     return JSON.parse(response.text || '{}');
   } catch (error) {
     console.error("Gemini Error:", error);
